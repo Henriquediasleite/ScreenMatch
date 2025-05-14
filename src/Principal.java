@@ -1,0 +1,63 @@
+import br.com.alura.ScreenMatch.calculos.Calculadora;
+import br.com.alura.ScreenMatch.calculos.Recomendacao;
+import br.com.alura.ScreenMatch.modelos.Episodio;
+import br.com.alura.ScreenMatch.modelos.Filme;
+import br.com.alura.ScreenMatch.modelos.Serie;
+
+import java.security.spec.ECPoint;
+
+public class Principal {
+    public static void main(String[] args) {
+
+        // Filme 1: O Poderoso Chefão
+        Filme meuFilme = new Filme();
+        meuFilme.setNome("O poderoso chefão");
+        meuFilme.setAnoDeLancamento(1970);
+        meuFilme.setDuracaoEmMinutos(180);
+        System.out.println("Duração do filme: " + meuFilme.getDuracaoEmMinutos());
+
+        meuFilme.exibirInformacoes();
+        meuFilme.avalia(8);
+        meuFilme.avalia(5);
+        meuFilme.avalia(10);
+
+        System.out.println("Total de avaliações: " + meuFilme.getTotalDeAvaliacoes());
+        System.out.println("Média de avaliações: " + meuFilme.obterMedia());
+
+        // Série: Lost
+        Serie lost = new Serie();
+        lost.setNome("Lost");
+        lost.setAnoDeLancamento(2000);
+        lost.setTemporada(10);
+        lost.setEpisodio(10);
+        lost.setMinutosPorEpisodio(50);
+        lost.exibirInformacoes();
+
+        System.out.println("Duração para maratonar Lost: " + lost.getDuracaoEmMinutos());
+
+        // Filme 2: Avatar
+        Filme outroFilme = new Filme();
+        outroFilme.setNome("Avatar");
+        outroFilme.setAnoDeLancamento(2023);
+        outroFilme.setDuracaoEmMinutos(200);
+        System.out.println("Duração do filme: " + outroFilme.getDuracaoEmMinutos());
+
+        // Calculadora de tempo total
+        Calculadora calculadora = new Calculadora();
+        calculadora.inclui(outroFilme);
+        calculadora.inclui(meuFilme);
+        calculadora.inclui(lost);
+
+        System.out.println("Tempo total para assistir tudo: " + calculadora.getTempoTotal());
+
+        Recomendacao filtro = new Recomendacao();
+        filtro.filtra(meuFilme);
+
+        Episodio episodio = new Episodio();
+        episodio.setNumero(1);
+        episodio.setSerie(lost);
+        episodio.setTotalVisualizacoes(300);
+
+        filtro.filtra(episodio);
+    }
+}
