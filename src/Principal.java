@@ -5,6 +5,8 @@ import br.com.alura.ScreenMatch.modelos.Filme;
 import br.com.alura.ScreenMatch.modelos.Serie;
 
 import java.security.spec.ECPoint;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Principal {
     public static void main(String[] args) {
@@ -57,7 +59,21 @@ public class Principal {
         episodio.setNumero(1);
         episodio.setSerie(lost);
         episodio.setTotalVisualizacoes(300);
-
         filtro.filtra(episodio);
+
+        Filme filmeDoHenrique = new Filme();
+        filmeDoHenrique.setNome("DogVille");
+        filmeDoHenrique.setAnoDeLancamento(2003);
+        filmeDoHenrique.setDuracaoEmMinutos(200);
+        filmeDoHenrique.avalia(10);
+
+        ArrayList<Filme> listaDeFilmes = new ArrayList<>();
+        listaDeFilmes.add(filmeDoHenrique);
+        listaDeFilmes.add(meuFilme);
+        listaDeFilmes.add(outroFilme);
+
+        System.out.println("Tamanho da lista: " + listaDeFilmes.size());
+        System.out.println("Primeiro filme: " + listaDeFilmes.get(0).getNome());
+        System.out.println(listaDeFilmes);
     }
 }
