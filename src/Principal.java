@@ -12,9 +12,7 @@ public class Principal {
     public static void main(String[] args) {
 
         // Filme 1: O Poderoso Chefão
-        Filme meuFilme = new Filme();
-        meuFilme.setNome("O poderoso chefão");
-        meuFilme.setAnoDeLancamento(1970);
+        Filme meuFilme = new Filme("O poderoso chefão", 1970);
         meuFilme.setDuracaoEmMinutos(180);
         System.out.println("Duração do filme: " + meuFilme.getDuracaoEmMinutos());
 
@@ -27,9 +25,7 @@ public class Principal {
         System.out.println("Média de avaliações: " + meuFilme.obterMedia());
 
         // Série: Lost
-        Serie lost = new Serie();
-        lost.setNome("Lost");
-        lost.setAnoDeLancamento(2000);
+        Serie lost = new Serie("Lost", 2000);
         lost.setTemporada(10);
         lost.setEpisodio(10);
         lost.setMinutosPorEpisodio(50);
@@ -38,9 +34,7 @@ public class Principal {
         System.out.println("Duração para maratonar Lost: " + lost.getDuracaoEmMinutos());
 
         // Filme 2: Avatar
-        Filme outroFilme = new Filme();
-        outroFilme.setNome("Avatar");
-        outroFilme.setAnoDeLancamento(2023);
+        Filme outroFilme = new Filme("Avatar", 2023);
         outroFilme.setDuracaoEmMinutos(200);
         System.out.println("Duração do filme: " + outroFilme.getDuracaoEmMinutos());
 
@@ -61,9 +55,7 @@ public class Principal {
         episodio.setTotalVisualizacoes(300);
         filtro.filtra(episodio);
 
-        Filme filmeDoHenrique = new Filme();
-        filmeDoHenrique.setNome("DogVille");
-        filmeDoHenrique.setAnoDeLancamento(2003);
+        Filme filmeDoHenrique = new Filme("DogVille", 2003);
         filmeDoHenrique.setDuracaoEmMinutos(200);
         filmeDoHenrique.avalia(10);
 
