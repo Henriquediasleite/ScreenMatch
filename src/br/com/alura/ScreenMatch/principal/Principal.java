@@ -1,12 +1,12 @@
+package br.com.alura.ScreenMatch.principal;
+
 import br.com.alura.ScreenMatch.calculos.Calculadora;
 import br.com.alura.ScreenMatch.calculos.Recomendacao;
 import br.com.alura.ScreenMatch.modelos.Episodio;
 import br.com.alura.ScreenMatch.modelos.Filme;
 import br.com.alura.ScreenMatch.modelos.Serie;
 
-import java.security.spec.ECPoint;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Principal {
     public static void main(String[] args) {
