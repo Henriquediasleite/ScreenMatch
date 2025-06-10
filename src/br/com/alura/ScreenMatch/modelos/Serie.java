@@ -46,4 +46,9 @@ public class Serie extends Titulo{
     public void setAtiva(boolean ativa) {
         this.ativa = ativa;
     }
+
+    @Override
+    public String toString() {
+        return "Série: " + this.getNome() + "(" + this.getAnoDeLancamento() + ")";
+    }
 }
